@@ -23,26 +23,34 @@ router.get("/register", (req, res) => {
 });
 //dashboard
 router.get("/dashboard", (req, res) => {
-  db.query("SELECT * FROM students", (err, result) => {
-    if (err) {
-      console.log(`Error message: ${err}`);
-    } else {
-      let enrolled = result.filter(
-        (data) => data.student_status === "Enrolled"
-      );
-      let notEnrolled = result.filter(
-        (data) => data.student_status === "Not Enrolled"
-      );
-      res.render("dashboard", {
-        title: "Dashboard",
-        dashboard1: "active",
-        dashboard: true,
-        dashboardData: result,
-        enrolled: enrolled.length,
-        notEnrolled: notEnrolled.length,
-      });
-    }
+  res.render("dashboard", {
+    title: "Dashboard",
+    dashboard1: "active",
+    dashboard: true,
+    // dashboardData: result,
+    // enrolled: enrolled.length,
+    // notEnrolled: notEnrolled.length,
   });
+  // db.query("SELECT * FROM students", (err, result) => {
+  //   if (err) {
+  //     console.log(`Error message: ${err}`);
+  //   } else {
+  //     let enrolled = result.filter(
+  //       (data) => data.student_status === "Enrolled"
+  //     );
+  //     let notEnrolled = result.filter(
+  //       (data) => data.student_status === "Not Enrolled"
+  //     );
+  //     res.render("dashboard", {
+  //       title: "Dashboard",
+  //       dashboard1: "active",
+  //       dashboard: true,
+  //       dashboardData: result,
+  //       enrolled: enrolled.length,
+  //       notEnrolled: notEnrolled.length,
+  //     });
+  //   }
+  // });
 });
 //student page
 router.get("/student", (req, res) => {
