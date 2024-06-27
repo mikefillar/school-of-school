@@ -9,9 +9,11 @@
   "author": "Mike Fillar",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.10.1",
     "nodemon": "^3.1.4"
   }
