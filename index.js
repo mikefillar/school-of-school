@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const port = 5000;
-const path = require("path");
-const mysql = require("mysql2");
-const env = require("dotenv");
-env.config({ path: "./.env" });
+// const path = require("path");
+// const mysql = require("mysql2");
+// const env = require("dotenv");
+// env.config({ path: "./.env" });
 
 //asigning the hbs to view engine
 app.set("view engine", "hbs");
