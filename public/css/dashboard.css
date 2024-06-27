@@ -207,3 +207,31 @@
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 960px) {
+  .sidenav {
+    .linkedIcon span,
+    .logout span {
+      display: none;
+    }
+  }
+  .active {
+    border-left: none;
+  }
+  .dashboard-items {
+    width: 30dvw;
+  }
+}
+@media screen and (max-width: 590) {
+  .sidenav {
+    .linkedIcon span,
+    .logout span {
+      display: none;
+    }
+  }
+  .dashboard-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
